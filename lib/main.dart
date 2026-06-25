@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
+import 'theme/app_theme.dart';
 import 'screens/onboarding_screen.dart';
 import 'screens/photo_capture_screen.dart';
 import 'screens/analysis_screen.dart';
@@ -66,14 +67,7 @@ class FitnessAIApp extends ConsumerWidget {
     return MaterialApp.router(
       title: 'AI Fitness Coach',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF6C63FF),
-          brightness: Brightness.dark,
-        ),
-        useMaterial3: true,
-        fontFamily: 'Inter',
-      ),
+      theme: buildKineticTheme(),
       routerConfig: router,
     );
   }

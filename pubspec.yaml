@@ -26,6 +26,7 @@ dependencies:
   image: ^4.1.7
   permission_handler: ^11.3.0
   flutter_markdown: ^0.7.1
+  google_fonts: ^6.2.1
 
 dev_dependencies:
   flutter_test:
