@@ -4,6 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 
 import 'package:flutter_fitness_ai_cv/screens/onboarding_screen.dart';
+import 'package:flutter_fitness_ai_cv/theme/app_theme.dart';
 
 void main() {
   final binding = IntegrationTestWidgetsFlutterBinding.ensureInitialized();
@@ -19,13 +20,7 @@ void main() {
       ProviderScope(
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color(0xFF6C63FF),
-              brightness: Brightness.dark,
-            ),
-            useMaterial3: true,
-          ),
+          theme: buildKineticTheme(),
           home: const OnboardingScreen(),
         ),
       ),
